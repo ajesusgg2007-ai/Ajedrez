@@ -1,5 +1,37 @@
-div{
+* {
+    box-sizing: border-box;
+}
+#tablero {
     display: grid;
-     grid-template-columns: repeat(8, 50px);
-      width: 400px;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+    width: min(100%, 400px);
+    aspect-ratio: 1;
+    border: 2px solid #333;
+}
+.casilla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 9vw, 2.75rem);
+    line-height: 1;
+}
+.blanca {
+    background-color: #f0d9b5;
+    color: #000;
+}
+
+.negra {
+    background-color: #b58863;
+    color: #fff;
+}
+
+.pieza-negra {
+    color: #111;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.pieza-blanca {
+    color: #fff;
+    text-shadow: 0 1px 2px #333;
 }
